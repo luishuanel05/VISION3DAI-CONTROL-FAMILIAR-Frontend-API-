@@ -1,0 +1,1 @@
+import { asegurarFamilia } from './familias-servicio.js'; import { resumenFamilia } from '../repositorios/tablero-repositorio.js'; export const obtenerResumen=(usuarioId)=>{const f=asegurarFamilia(usuarioId);return {familia:f,...resumenFamilia(f.id)}};

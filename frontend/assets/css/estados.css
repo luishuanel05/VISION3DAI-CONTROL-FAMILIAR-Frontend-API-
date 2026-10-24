@@ -1,0 +1,25 @@
+/** Carga, vacío, errores y confirmaciones. */
+.estado-vacio {
+  padding: var(--espacio-12) var(--espacio-4);
+  text-align: center;
+  color: var(--color-texto-secundario);
+}
+
+.alerta-pagina {
+  margin-bottom: var(--espacio-6);
+  border: 0;
+  border-radius: var(--radio-md);
+}
+
+.esqueleto {
+  height: 5.5rem;
+  border-radius: var(--radio-md);
+  background: linear-gradient(90deg, #e8f1eb 25%, #f8fbf9 37%, #e8f1eb 63%);
+  background-size: 400% 100%;
+  animation: carga 1.25s infinite;
+}
+
+@keyframes carga {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}

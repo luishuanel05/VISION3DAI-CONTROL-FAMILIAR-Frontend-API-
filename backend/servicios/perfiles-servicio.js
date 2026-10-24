@@ -1,0 +1,2 @@
+import { listarPerfiles,crearPerfil } from '../repositorios/perfiles-repositorio.js'; import { asegurarFamilia } from './familias-servicio.js'; import { exigirTexto } from '../utilidades/validaciones.js';
+export function obtenerPerfiles(usuarioId){return listarPerfiles(asegurarFamilia(usuarioId).id)} export function altaPerfil(usuarioId,d){const f=asegurarFamilia(usuarioId);return crearPerfil(f.id,{...d,nombre:exigirTexto(d.nombre,'nombre',2,60)})}

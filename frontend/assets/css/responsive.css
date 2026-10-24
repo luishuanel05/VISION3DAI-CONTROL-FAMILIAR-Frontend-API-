@@ -1,0 +1,58 @@
+/** Ajustes responsive globales. */
+@media (max-width: 991.98px) {
+  .rejilla-principal,
+  .rejilla-calendario {
+    grid-template-columns: 1fr;
+  }
+
+  .columna-lateral,
+  .panel-lateral {
+    position: static;
+  }
+
+  .navbar-nav {
+    gap: var(--espacio-1);
+    padding-block: var(--espacio-3);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contenedor-pagina {
+    width: min(100% - 1.25rem, var(--ancho-contenido));
+    padding-block: var(--espacio-6) var(--espacio-10);
+  }
+
+  .cabecera-pagina {
+    display: block;
+  }
+
+  .cabecera-pagina > :last-child {
+    margin-top: var(--espacio-4);
+  }
+
+  .panel__cabecera,
+  .panel__cuerpo,
+  .tarjeta {
+    padding: var(--espacio-4);
+  }
+
+  .evento {
+    grid-template-columns: 4rem minmax(0, 1fr);
+  }
+
+  .evento .insignia-tipo {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

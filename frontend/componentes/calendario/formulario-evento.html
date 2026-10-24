@@ -1,0 +1,60 @@
+<section class="panel formulario-evento" data-api-modulo="calendario.crear" id="seccion-crear-evento">
+ <div class="panel__cabecera">
+  <h2 class="panel__titulo">
+   Nuevo evento
+  </h2>
+  <span class="insignia-tipo">
+   API POST
+  </span>
+ </div>
+ <div class="panel__cuerpo">
+  <form id="formulario-evento" novalidate>
+   <div class="mb-3">
+    <label class="etiqueta-campo" for="titulo">
+     T&iacute;tulo
+    </label>
+    <input class="form-control" id="titulo" maxlength="100" name="titulo" required>
+    <div class="texto-ayuda">
+     Nombre breve y reconocible.
+    </div>
+   </div>
+   <div class="mb-3">
+    <label class="etiqueta-campo" for="tipo">
+     Tipo
+    </label>
+    <select class="form-select" id="tipo" name="tipo">
+     <option value="actividad">
+      Actividad
+     </option>
+     <option value="recordatorio">
+      Recordatorio
+     </option>
+     <option value="meta">
+      Meta
+     </option>
+     <option value="familiar">
+      Familiar
+     </option>
+     <option value="vision3d">
+      VISION3D
+     </option>
+    </select>
+   </div>
+   <div class="mb-3">
+    <label class="etiqueta-campo" for="fechaInicio">
+     Fecha y hora
+    </label>
+    <input class="form-control" id="fechaInicio" name="fechaInicio" required type="datetime-local">
+   </div>
+   <div class="mb-4">
+    <label class="etiqueta-campo" for="descripcion">
+     Descripci&oacute;n
+    </label>
+    <textarea class="form-control" id="descripcion" maxlength="500" name="descripcion" rows="4"></textarea>
+   </div>
+   <button class="boton-principal w-100" type="submit">
+    Guardar evento
+   </button>
+  </form>
+ </div>
+</section>

@@ -1,0 +1,1 @@
+export function mostrarEstado(id,mensaje,tipo='danger'){const e=document.getElementById(id);if(!e)return;e.className=`estado alert alert-${tipo}`;e.textContent=mensaje;e.hidden=false}export function dineroSeguro(valor){return Number(valor||0).toLocaleString('es-CL')}

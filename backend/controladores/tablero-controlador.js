@@ -1,0 +1,1 @@
+import { obtenerResumen } from '../servicios/tablero-servicio.js'; import { correcto } from '../nucleo/respuestas-http.js'; export const resumen=(c)=>correcto(c.respuesta,obtenerResumen(c.usuario.id));

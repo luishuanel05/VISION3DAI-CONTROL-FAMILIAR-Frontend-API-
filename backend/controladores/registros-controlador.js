@@ -1,0 +1,1 @@
+import * as s from '../servicios/registros-servicio.js'; import { correcto } from '../nucleo/respuestas-http.js'; export const listar=(tipo)=>(c)=>correcto(c.respuesta,s.listar(tipo,c.usuario.id,Number(c.consulta.perfilId))); export const crear=(tipo)=>(c)=>correcto(c.respuesta,s.crear(tipo,c.usuario.id,c.cuerpo),'Registro creado',201);

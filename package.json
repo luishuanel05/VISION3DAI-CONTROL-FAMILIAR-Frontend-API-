@@ -1,0 +1,17 @@
+{
+  "name": "vision3dai-control-familiar",
+  "version": "1.0.0",
+  "description": "Tablero familiar en Node.js puro y SQLite, sin Express.",
+  "type": "module",
+  "main": "backend/servidor.js",
+  "scripts": {
+    "desarrollo": "node --watch backend/servidor.js",
+    "start": "node backend/servidor.js",
+    "test": "node --test pruebas/*.test.js",
+    "migrar": "node scripts/migrar.js",
+    "sembrar": "node scripts/sembrar.js",
+    "verificar": "node scripts/verificar.js"
+  },
+  "engines": { "node": ">=24.0.0" },
+  "license": "MIT"
+}

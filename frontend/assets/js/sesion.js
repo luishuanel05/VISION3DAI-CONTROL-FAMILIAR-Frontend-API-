@@ -1,0 +1,1 @@
+import {api} from './api.js';export async function exigirSesion(){const s=await api('/api/autenticacion/sesion');if(!s.autenticado){location.href='/login.html';throw new Error('Sin sesión')}return s.usuario}export async function cerrarSesion(){await api('/api/autenticacion/cerrar-sesion',{metodo:'POST',datos:{}});location.href='/login.html'}

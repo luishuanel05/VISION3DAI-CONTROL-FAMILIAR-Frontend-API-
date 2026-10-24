@@ -1,0 +1,50 @@
+/** Estructuras generales. No contiene estilos específicos de una página. */
+.contenedor-pagina {
+  width: min(100% - 2rem, var(--ancho-contenido));
+  margin-inline: auto;
+  padding-block: var(--espacio-8) var(--espacio-12);
+}
+
+.cabecera-pagina {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--espacio-6);
+  margin-bottom: var(--espacio-8);
+}
+
+.cabecera-pagina__contenido {
+  max-width: 48rem;
+}
+
+.cabecera-pagina__titulo {
+  margin-bottom: var(--espacio-3);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.cabecera-pagina__descripcion {
+  margin-bottom: 0;
+  color: var(--color-texto-secundario);
+  font-size: var(--texto-lg);
+}
+
+.rejilla-principal {
+  display: grid;
+  grid-template-columns: minmax(18rem, 24rem) minmax(0, 1fr);
+  gap: var(--espacio-6);
+  align-items: start;
+}
+
+.columna-lateral {
+  position: sticky;
+  top: calc(var(--altura-cabecera) + var(--espacio-4));
+}
+
+.seccion-pagina {
+  margin-bottom: var(--espacio-6);
+}
+
+.ancho-formulario {
+  width: min(100%, var(--ancho-formulario));
+  margin-inline: auto;
+}

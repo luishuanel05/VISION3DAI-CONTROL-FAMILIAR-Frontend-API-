@@ -1,0 +1,1 @@
+import * as s from '../servicios/perfiles-servicio.js'; import { correcto } from '../nucleo/respuestas-http.js'; export const listar=(c)=>correcto(c.respuesta,s.obtenerPerfiles(c.usuario.id)); export const crear=(c)=>correcto(c.respuesta,s.altaPerfil(c.usuario.id,c.cuerpo),'Perfil creado',201);

@@ -1,0 +1,5 @@
+import * as servicio from '../servicios/autenticacion-servicio.js'; import { correcto } from '../nucleo/respuestas-http.js'; import { crearCookie,eliminarCookie } from '../nucleo/escribir-cookie.js'; import { NOMBRE_COOKIE } from '../configuracion/constantes.js'; import { entorno } from '../configuracion/entorno.js';
+export async function registrar(c){const usuario=await servicio.registrar(c.cuerpo);correcto(c.respuesta,usuario,'Usuario registrado correctamente',201)}
+export async function iniciar(c){const r=await servicio.iniciar(c.cuerpo.correo,c.cuerpo.clave);c.respuesta.setHeader('Set-Cookie',crearCookie(NOMBRE_COOKIE,r.token,{maxAge:entorno.duracionSesionSegundos,segura:entorno.produccion}));correcto(c.respuesta,{usuario:r.usuario,expiraEn:r.expiraEn},'Sesión iniciada')}
+export async function cerrar(c){servicio.cerrar(c.cookies[NOMBRE_COOKIE]);c.respuesta.setHeader('Set-Cookie',eliminarCookie(NOMBRE_COOKIE,{segura:entorno.produccion}));correcto(c.respuesta,{},'Sesión cerrada')}
+export async function sesion(c){correcto(c.respuesta,{autenticado:Boolean(c.usuario),usuario:c.usuario})}

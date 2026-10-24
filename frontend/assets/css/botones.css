@@ -1,0 +1,34 @@
+/** Botones y acciones. */
+.btn,
+.boton-principal {
+  border-radius: var(--radio-md);
+  font-weight: 720;
+  transition: transform var(--transicion-rapida), box-shadow var(--transicion-rapida), background-color var(--transicion-rapida);
+}
+
+.boton-principal,
+.btn-success {
+  border: 1px solid var(--color-verde-700);
+  background: linear-gradient(135deg, var(--color-verde-700), var(--color-verde-900));
+  color: var(--color-blanco);
+}
+
+.boton-principal {
+  min-height: 2.9rem;
+  padding-inline: var(--espacio-5);
+}
+
+.boton-principal:hover,
+.btn-success:hover {
+  border-color: var(--color-verde-950);
+  background: linear-gradient(135deg, var(--color-verde-800), var(--color-verde-950));
+  color: var(--color-blanco);
+  box-shadow: var(--sombra-sm);
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible,
+.boton-principal:focus-visible {
+  outline: none;
+  box-shadow: var(--sombra-foco);
+}

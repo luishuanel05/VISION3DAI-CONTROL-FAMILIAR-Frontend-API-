@@ -1,0 +1,19 @@
+/** Login, registro y creación inicial de familia. */
+.pagina-autenticacion {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: var(--espacio-6);
+  background:
+    radial-gradient(circle at 15% 20%, rgb(110 231 183 / 28%), transparent 24rem),
+    linear-gradient(145deg, var(--color-verde-950), var(--color-verde-700));
+}
+
+.panel-autenticacion {
+  width: min(100%, 34rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: var(--radio-xl);
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 28px 70px rgb(3 48 36 / 25%);
+}

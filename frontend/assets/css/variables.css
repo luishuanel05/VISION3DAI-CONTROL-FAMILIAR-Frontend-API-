@@ -1,0 +1,63 @@
+/**
+ * Archivo: variables.css
+ * Propósito: concentrar todos los tokens visuales del sistema.
+ * Regla: ningún componente debe repetir colores o sombras literales.
+ */
+:root {
+  color-scheme: light;
+
+  --color-verde-950: #052e25;
+  --color-verde-900: #064e3b;
+  --color-verde-800: #065f46;
+  --color-verde-700: #047857;
+  --color-verde-600: #059669;
+  --color-verde-500: #10b981;
+  --color-verde-300: #6ee7b7;
+  --color-verde-200: #a7f3d0;
+  --color-verde-100: #d1fae5;
+  --color-verde-50: #ecfdf5;
+
+  --color-blanco: #ffffff;
+  --color-fondo: #f4f8f5;
+  --color-superficie: #ffffff;
+  --color-superficie-suave: #f8fbf9;
+  --color-borde: #dce8e1;
+  --color-borde-fuerte: #bfd4c7;
+  --color-texto-principal: #17251f;
+  --color-texto-secundario: #64746c;
+  --color-error: #b42318;
+  --color-advertencia: #b54708;
+  --color-informacion: #026aa2;
+
+  --espacio-1: 0.25rem;
+  --espacio-2: 0.5rem;
+  --espacio-3: 0.75rem;
+  --espacio-4: 1rem;
+  --espacio-5: 1.25rem;
+  --espacio-6: 1.5rem;
+  --espacio-8: 2rem;
+  --espacio-10: 2.5rem;
+  --espacio-12: 3rem;
+
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.875rem;
+  --texto-base: 1rem;
+  --texto-lg: 1.125rem;
+  --texto-xl: 1.25rem;
+
+  --radio-sm: 0.55rem;
+  --radio-md: 0.8rem;
+  --radio-lg: 1.15rem;
+  --radio-xl: 1.5rem;
+  --radio-redondo: 999px;
+
+  --sombra-xs: 0 1px 2px rgb(16 24 20 / 5%);
+  --sombra-sm: 0 6px 18px rgb(6 78 59 / 7%);
+  --sombra-md: 0 16px 40px rgb(6 78 59 / 10%);
+  --sombra-foco: 0 0 0 0.25rem rgb(16 185 129 / 18%);
+
+  --transicion-rapida: 160ms ease;
+  --ancho-contenido: 1320px;
+  --ancho-formulario: 34rem;
+  --altura-cabecera: 4.5rem;
+}

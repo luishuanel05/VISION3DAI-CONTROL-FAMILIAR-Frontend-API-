@@ -1,0 +1,1 @@
+import { inicializarBaseDatos } from '../backend/base-datos/inicializar.js';import{cerrarDb}from'../backend/base-datos/conexion.js';await inicializarBaseDatos();console.log('Migración completada.');cerrarDb();

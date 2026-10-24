@@ -1,0 +1,108 @@
+{
+  "archivo": "imagePoses.csv",
+  "totalMuestras": 3501,
+  "muestrasConLandmarks": 2641,
+  "muestrasSinLandmarks": 860,
+  "etiquetas": {
+    "pushup": 398,
+    "pullup": 400,
+    "chest dips": 389,
+    "bent over row": 400,
+    "shoulder press": 400,
+    "squat": 400,
+    "lunges": 400,
+    "plank": 400,
+    "glute bridge": 314
+  },
+  "anchoMin": 102,
+  "anchoMax": 400,
+  "altoMin": 61,
+  "altoMax": 492,
+  "muestras": [
+    {
+      "imageName": "full-body-person-doing-pushup0.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "183",
+      "imageHeight": "275",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup1.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "244",
+      "imageHeight": "206",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup10.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "167",
+      "imageHeight": "302",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup100.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "183",
+      "imageHeight": "275",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup101.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "225",
+      "imageHeight": "225",
+      "hasPoseLandmarks": false
+    },
+    {
+      "imageName": "full-body-person-doing-pushup102.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "192",
+      "imageHeight": "262",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup103.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "168",
+      "imageHeight": "300",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup104.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "168",
+      "imageHeight": "299",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup105.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "183",
+      "imageHeight": "275",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup106.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "168",
+      "imageHeight": "299",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup107.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "275",
+      "imageHeight": "183",
+      "hasPoseLandmarks": true
+    },
+    {
+      "imageName": "full-body-person-doing-pushup108.jpeg",
+      "exercise": "pushup",
+      "imageWidth": "194",
+      "imageHeight": "259",
+      "hasPoseLandmarks": true
+    }
+  ],
+  "notaCampo": "El CSV original usa el encabezado excercise; la API lo normaliza como exercise."
+}

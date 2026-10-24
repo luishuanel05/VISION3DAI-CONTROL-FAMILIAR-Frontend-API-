@@ -1,0 +1,29 @@
+/**
+ * Archivo: base.css
+ * Propósito: punto único de entrada para las hojas de estilo.
+ * Orden: tokens, normalización, tipografía, estructura, componentes y páginas.
+ */
+@import url("./variables.css");
+@import url("./reset.css");
+@import url("./tipografia.css");
+@import url("./layout.css");
+@import url("./navegacion.css");
+@import url("./componentes.css");
+@import url("./formularios.css");
+@import url("./botones.css");
+@import url("./estados.css");
+@import url("./dashboard.css");
+@import url("./autenticacion.css");
+@import url("./calendario.css");
+@import url("./responsive.css");
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 0%, rgb(167 243 208 / 22%), transparent 28rem),
+    var(--color-fondo);
+}
+
+[hidden] {
+  display: none !important;
+}

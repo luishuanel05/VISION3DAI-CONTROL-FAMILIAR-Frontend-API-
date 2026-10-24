@@ -1,0 +1,1 @@
+import test from'node:test';import assert from'node:assert/strict';import{coincidirRuta}from'../backend/nucleo/coincidencia-rutas.js';test('extrae parámetros dinámicos',()=>assert.deepEqual(coincidirRuta('/api/perfiles/:id','/api/perfiles/15'),{id:'15'}));test('rechaza rutas diferentes',()=>assert.equal(coincidirRuta('/api/metas/:id','/api/perfiles/1'),null));

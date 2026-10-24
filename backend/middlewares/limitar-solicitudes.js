@@ -1,0 +1,2 @@
+/** Limitador simple en memoria para intentos de autenticación. */
+import { ErrorHttp } from '../nucleo/errores-http.js'; const intentos=new Map(); export async function limitarAutenticacion({solicitud},siguiente){const ip=solicitud.socket.remoteAddress||'desconocida',ahora=Date.now(),ventana=15*60*1000;let r=intentos.get(ip)||{inicio:ahora,total:0};if(ahora-r.inicio>ventana)r={inicio:ahora,total:0};r.total++;intentos.set(ip,r);if(r.total>30)throw new ErrorHttp(429,'Demasiados intentos. Inténtalo más tarde');return siguiente();}

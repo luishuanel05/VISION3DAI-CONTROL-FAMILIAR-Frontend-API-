@@ -1,0 +1,1 @@
+/** Crea datos de demostración sin contraseñas predefinidas. */ import{inicializarBaseDatos}from'../backend/base-datos/inicializar.js';import{obtenerDb,cerrarDb}from'../backend/base-datos/conexion.js';await inicializarBaseDatos();console.log('Crea primero un usuario desde la interfaz. El proyecto no incluye credenciales demo inseguras.');cerrarDb();

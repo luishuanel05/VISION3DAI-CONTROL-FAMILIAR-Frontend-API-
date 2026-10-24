@@ -1,0 +1,39 @@
+/** Navegación principal y enlace de accesibilidad. */
+.navbar {
+  min-height: var(--altura-cabecera);
+  background: linear-gradient(115deg, var(--color-verde-950), var(--color-verde-800));
+  box-shadow: var(--sombra-sm);
+}
+
+.marca {
+  font-weight: 850;
+  letter-spacing: 0.04em;
+}
+
+.nav-link {
+  border-radius: var(--radio-sm);
+  color: rgb(255 255 255 / 82%) !important;
+  font-weight: 600;
+  transition: background-color var(--transicion-rapida), color var(--transicion-rapida);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgb(255 255 255 / 12%);
+  color: var(--color-blanco) !important;
+}
+
+.enlace-salto {
+  position: fixed;
+  z-index: 2000;
+  top: var(--espacio-3);
+  left: -100vw;
+  padding: var(--espacio-3) var(--espacio-4);
+  border-radius: var(--radio-sm);
+  background: var(--color-blanco);
+  color: var(--color-verde-900);
+}
+
+.enlace-salto:focus {
+  left: var(--espacio-3);
+}

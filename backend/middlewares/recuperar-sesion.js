@@ -1,0 +1,2 @@
+import { NOMBRE_COOKIE } from '../configuracion/constantes.js'; import { hashToken } from '../seguridad/tokens.js'; import { buscarSesion,tocarSesion } from '../repositorios/sesiones-repositorio.js';
+export async function recuperarSesion(contexto,siguiente){const token=contexto.cookies[NOMBRE_COOKIE];if(token){const sesion=buscarSesion(hashToken(token));if(sesion){contexto.sesion=sesion;contexto.usuario={id:sesion.usuario_id,nombre:sesion.nombre,apellido:sesion.apellido,correo:sesion.correo,rol:sesion.rol};tocarSesion(sesion.id);}}return siguiente();}

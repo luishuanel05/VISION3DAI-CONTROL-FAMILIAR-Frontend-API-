@@ -1,0 +1,4 @@
+import { ErrorHttp } from '../nucleo/errores-http.js';
+export function exigirTexto(valor,campo,min=1,max=120){const limpio=String(valor||'').trim();if(limpio.length<min||limpio.length>max)throw new ErrorHttp(400,`El campo ${campo} no es válido`,[{campo,mensaje:`Debe contener entre ${min} y ${max} caracteres`}]);return limpio;}
+export function exigirCorreo(valor){const correo=String(valor||'').trim().toLowerCase();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo))throw new ErrorHttp(400,'El correo no es válido',[{campo:'correo',mensaje:'Introduce un correo válido'}]);return correo;}
+export function exigirNumero(valor,campo,min=0){const numero=Number(valor);if(!Number.isFinite(numero)||numero<min)throw new ErrorHttp(400,`El campo ${campo} no es válido`,[{campo,mensaje:`Debe ser un número mayor o igual que ${min}`}]);return numero;}

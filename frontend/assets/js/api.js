@@ -1,0 +1,2 @@
+/** Cliente HTTP único del frontend. */
+export async function api(ruta,{metodo='GET',datos}={}){const opciones={method:metodo,credentials:'same-origin',headers:{}};if(datos!==undefined){opciones.headers['Content-Type']='application/json';opciones.body=JSON.stringify(datos)}const r=await fetch(ruta,opciones);let cuerpo;try{cuerpo=await r.json()}catch{throw new Error('El servidor devolvió una respuesta no válida')}if(!r.ok||!cuerpo.correcto)throw new Error(cuerpo.mensaje||'No se pudo completar la operación');return cuerpo.datos;}

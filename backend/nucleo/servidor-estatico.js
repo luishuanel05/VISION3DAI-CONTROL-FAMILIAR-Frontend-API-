@@ -1,0 +1,4 @@
+/** Sirve archivos públicos impidiendo recorridos fuera de frontend. */
+import path from 'node:path'; import fs from 'node:fs/promises'; import { TIPOS } from './tipos-contenido.js';
+const raiz=path.resolve('frontend');
+export async function servirEstatico(solicitud,respuesta){if(solicitud.method!=='GET')return false; const url=new URL(solicitud.url,`http://${solicitud.headers.host||'localhost'}`); let relativa=decodeURIComponent(url.pathname); if(relativa==='/')relativa='/index.html'; const absoluta=path.resolve(raiz,'.'+relativa); if(!absoluta.startsWith(raiz+path.sep))return false; const ext=path.extname(absoluta).toLowerCase(); if(!TIPOS[ext])return false; try{const datos=await fs.readFile(absoluta);respuesta.writeHead(200,{'Content-Type':TIPOS[ext],'Cache-Control':ext==='.html'?'no-cache':'public, max-age=3600','Content-Length':datos.length});respuesta.end(datos);return true;}catch{return false;}}

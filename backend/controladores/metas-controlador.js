@@ -1,0 +1,1 @@
+import * as s from '../servicios/metas-servicio.js'; import { correcto } from '../nucleo/respuestas-http.js'; export const listar=(c)=>correcto(c.respuesta,s.obtenerMetas(c.usuario.id)); export const crear=(c)=>correcto(c.respuesta,s.altaMeta(c.usuario.id,c.cuerpo),'Meta creada',201);

@@ -1,0 +1,1 @@
+import { ErrorHttp } from '../nucleo/errores-http.js'; export async function exigirAutenticacion(contexto,siguiente){if(!contexto.usuario)throw new ErrorHttp(401,'Debes iniciar sesión');return siguiente();}

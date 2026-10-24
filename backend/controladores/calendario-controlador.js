@@ -1,0 +1,1 @@
+import * as s from '../servicios/calendario-servicio.js'; import { correcto } from '../nucleo/respuestas-http.js'; export const listar=(c)=>correcto(c.respuesta,s.obtenerEventos(c.usuario.id)); export const crear=(c)=>correcto(c.respuesta,s.altaEvento(c.usuario.id,c.cuerpo),'Evento creado',201);

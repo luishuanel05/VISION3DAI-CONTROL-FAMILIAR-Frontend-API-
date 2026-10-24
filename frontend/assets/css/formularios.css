@@ -1,0 +1,38 @@
+/** Campos y formularios coherentes en todo el sistema. */
+.etiqueta-campo,
+.form-label {
+  margin-bottom: var(--espacio-2);
+  color: var(--color-texto-principal);
+  font-weight: 680;
+}
+
+.form-control,
+.form-select {
+  min-height: 2.85rem;
+  border: 1px solid var(--color-borde-fuerte);
+  border-radius: var(--radio-md);
+  background-color: var(--color-blanco);
+  color: var(--color-texto-principal);
+  transition: border-color var(--transicion-rapida), box-shadow var(--transicion-rapida);
+}
+
+textarea.form-control {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-verde-500);
+  box-shadow: var(--sombra-foco);
+}
+
+.texto-ayuda {
+  margin-top: var(--espacio-2);
+  color: var(--color-texto-secundario);
+  font-size: var(--texto-sm);
+}
+
+.grupo-formulario {
+  margin-bottom: var(--espacio-5);
+}

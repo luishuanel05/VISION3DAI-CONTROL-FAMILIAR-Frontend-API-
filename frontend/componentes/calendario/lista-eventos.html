@@ -1,0 +1,43 @@
+<section class="panel" data-api-modulo="calendario.listar" id="seccion-lista-eventos">
+ <div class="panel__cabecera">
+  <h2 class="panel__titulo">
+   Pr&oacute;ximos eventos
+  </h2>
+  <div class="barra-filtros">
+   <select aria-label="Filtrar por tipo" class="form-select form-select-sm" id="filtro-tipo">
+    <option value>
+     Todos los tipos
+    </option>
+    <option value="actividad">
+     Actividad
+    </option>
+    <option value="recordatorio">
+     Recordatorio
+    </option>
+    <option value="meta">
+     Meta
+    </option>
+    <option value="familiar">
+     Familiar
+    </option>
+    <option value="vision3d">
+     VISION3D
+    </option>
+   </select>
+  </div>
+ </div>
+ <div class="panel__cuerpo">
+  <div aria-label="Cargando eventos" class="esqueleto" id="cargando-eventos">
+  </div>
+  <ul class="lista-eventos" hidden id="lista-eventos">
+  </ul>
+  <div class="estado-vacio" hidden id="sin-eventos">
+   <strong>
+    No hay eventos registrados
+   </strong>
+   <p class="mb-0">
+    Crea el primero desde el formulario.
+   </p>
+  </div>
+ </div>
+</section>

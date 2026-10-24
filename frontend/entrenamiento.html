@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>
+   Datos de entrenamiento &middot; VISION3DAI
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/css/base.css" rel="stylesheet">
+ </head>
+ <body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+   <div class="container">
+    <a class="navbar-brand marca" href="/dashboard.html">
+     VISION3DAI
+    </a>
+    <div class="ms-auto d-flex gap-2">
+     <a class="btn btn-outline-light" href="/dashboard.html">
+      Dashboard
+     </a>
+     <button class="btn btn-light" id="salir">
+      Cerrar sesi&oacute;n
+     </button>
+    </div>
+   </div>
+  </nav>
+  <main class="contenedor-pagina">
+   <header class="cabecera-pagina">
+    <div>
+     <p class="text-success fw-semibold mb-1">
+      Dataset conectado
+     </p>
+     <h1 class="cabecera-pagina__titulo">
+      Datos de imagePoses.csv
+     </h1>
+     <p class="cabecera-pagina__descripcion">
+      Este m&oacute;dulo expone estad&iacute;sticas del archivo para que Richard pueda conectarlas por API. No ejecuta entrenamiento ni descarga im&aacute;genes Base64 al navegador.
+     </p>
+    </div>
+   </header>
+   <div hidden id="estado">
+   </div>
+   <section class="row g-3 seccion-pagina">
+    <div class="col-sm-6 col-xl-3">
+     <article class="resumen-dato">
+      <div class="resumen-dato__valor fs-6" id="archivo">
+       &mdash;
+      </div>
+      <div class="resumen-dato__nombre">
+       Archivo
+      </div>
+     </article>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+     <article class="resumen-dato">
+      <div class="resumen-dato__valor" id="total">
+       0
+      </div>
+      <div class="resumen-dato__nombre">
+       Muestras
+      </div>
+     </article>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+     <article class="resumen-dato">
+      <div class="resumen-dato__valor" id="conPose">
+       0
+      </div>
+      <div class="resumen-dato__nombre">
+       Con landmarks
+      </div>
+     </article>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+     <article class="resumen-dato">
+      <div class="resumen-dato__valor" id="sinPose">
+       0
+      </div>
+      <div class="resumen-dato__nombre">
+       Sin landmarks
+      </div>
+     </article>
+    </div>
+   </section>
+   <div class="row g-4">
+    <div class="col-lg-5">
+     <section class="panel">
+      <div class="panel__cabecera">
+       <h2 class="panel__titulo">
+        Distribuci&oacute;n por ejercicio
+       </h2>
+      </div>
+      <div class="panel__cuerpo">
+       <canvas id="graficoEtiquetas">
+       </canvas>
+      </div>
+     </section>
+    </div>
+    <div class="col-lg-7">
+     <section class="panel">
+      <div class="panel__cabecera">
+       <h2 class="panel__titulo">
+        Muestras normalizadas
+       </h2>
+      </div>
+      <div class="table-responsive">
+       <table class="table align-middle mb-0">
+        <thead>
+         <tr>
+          <th>
+           Imagen
+          </th>
+          <th>
+           Ejercicio
+          </th>
+          <th>
+           Dimensiones
+          </th>
+          <th>
+           Landmarks
+          </th>
+         </tr>
+        </thead>
+        <tbody id="muestras">
+        </tbody>
+       </table>
+      </div>
+     </section>
+    </div>
+   </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js">
+  </script>
+  <script src="/assets/js/entrenamiento.js" type="module">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,237 @@
+====================================================================
+VISION3DAI CONTROL FAMILIAR
+GUÍA DE EJECUCIÓN PARA RICHARD
+====================================================================
+
+REQUISITOS
+====================================================================
+
+- Windows 10 o Windows 11.
+- Node.js 22 o superior.
+- Navegador moderno.
+- PowerShell o CMD.
+
+====================================================================
+1. ABRIR EL PROYECTO
+====================================================================
+
+Abrir PowerShell.
+
+Ingresar a la carpeta del proyecto
+
+cd CUsersluisfDesktopVISION3DAI-CONTROL-FAMILIAR (Frontend + API)
+
+Comprobar contenido
+
+Get-ChildItem
+
+Debe existir
+
+package.json
+.env.example
+backend
+frontend
+docs
+
+====================================================================
+2. CREAR ARCHIVO .ENV
+====================================================================
+
+Ejecutar
+
+Copy-Item .env.example .env
+
+Abrir .env y revisar
+
+PUERTO=3000
+ENTORNO=desarrollo
+
+VISION3D_URL=httplocalhost5000
+
+Modificar VISION3D_URL según la dirección real de VISION3D.
+
+====================================================================
+3. CREAR SQLITE
+====================================================================
+
+PowerShell bloquea npm.ps1.
+
+Utilizar
+
+npm.cmd run migrar
+
+Esto crea
+
+datosvision3dai.sqlite
+
+====================================================================
+4. INICIAR APLICACIÓN
+====================================================================
+
+Ejecutar
+
+npm.cmd start
+
+Debe aparecer
+
+VISION3DAI disponible en httplocalhost3000
+
+====================================================================
+5. ABRIR EL SISTEMA
+====================================================================
+
+Abrir navegador
+
+httplocalhost3000
+
+O desde PowerShell
+
+Start-Process httplocalhost3000
+
+====================================================================
+6. PRIMER USO
+====================================================================
+
+1. Crear cuenta.
+2. Iniciar sesión.
+3. Crear familia.
+4. Crear perfiles.
+5. Registrar hidratación.
+6. Registrar alimentación.
+7. Registrar actividad física.
+8. Crear metas.
+9. Crear eventos.
+
+====================================================================
+7. DASHBOARD
+====================================================================
+
+El dashboard muestra
+
+- Perfiles activos.
+- Hidratación.
+- Actividad física.
+- Metas.
+- Eventos próximos.
+- Resumen gráfico.
+- Información enviada por VISION3D.
+
+====================================================================
+8. DATOS DE ENTRENAMIENTO
+====================================================================
+
+Pantalla
+
+entrenamiento.html
+
+Información disponible
+
+- Cantidad de muestras.
+- Distribución de ejercicios.
+- Disponibilidad de landmarks.
+- Ejemplos procesados.
+- Resumen del dataset imagePoses.csv.
+
+====================================================================
+9. INTEGRACIÓN VISION3D
+====================================================================
+
+VISION3D NO se ejecuta dentro de este proyecto.
+
+VISION3D envía resultados mediante
+
+POST apianalisisresultados
+
+Ejemplo
+
+{
+  idExterno resultado-001,
+  perfilId 1,
+  ejercicio squat,
+  repeticiones 20,
+  repeticionesCorrectas 17,
+  repeticionesMejorables 3,
+  confianzaPromedio 0.92,
+  visibilidadLandmarksPromedio 0.88,
+  tiempoInferenciaMs 155,
+  duracionSegundos 42,
+  resultado mejorable,
+  modeloVersion vision3d-v1
+}
+
+====================================================================
+10. INFORMACIÓN MOSTRADA DEL ANÁLISIS
+====================================================================
+
+Cuando VISION3D envía resultados se visualiza
+
+- Sesiones analizadas.
+- Repeticiones totales.
+- Porcentaje correcto.
+- Repeticiones mejorables.
+- Confianza promedio.
+- Visibilidad promedio.
+- Tiempo promedio de inferencia.
+- Ejercicios detectados.
+- Historial reciente.
+- Tendencias familiares.
+
+====================================================================
+11. ARQUITECTURA DE INTEGRACIÓN
+====================================================================
+
+Frontend
+
+dashboard.html
+logica.html
+api.js
+dashboard.js
+logica-dashboard.js
+vista-analisis.js
+
+Backend
+
+analisis-rutas.js
+analisis-controlador.js
+analisis-servicio.js
+analisis-repositorio.js
+
+SQLite
+
+tabla analisis_vision3d
+
+====================================================================
+12. DESARROLLO
+====================================================================
+
+Modo desarrollo
+
+npm.cmd run desarrollo
+
+====================================================================
+13. PRUEBAS
+====================================================================
+
+Ejecutar
+
+npm.cmd test
+
+Ejecutar
+
+npm.cmd run verificar
+
+Se debe obtener resultado correcto antes de publicar cambios.
+
+====================================================================
+14. DETENER SERVIDOR
+====================================================================
+
+Ctrl + C
+
+Confirmar
+
+Y
+
+====================================================================
+FIN
+====================================================================

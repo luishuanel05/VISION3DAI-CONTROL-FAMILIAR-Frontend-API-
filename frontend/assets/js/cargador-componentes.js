@@ -1,0 +1,2 @@
+/** Inserta fragmentos HTML delimitados. Los fragmentos no contienen scripts. */
+export async function cargarComponentes(){const bloques=[...document.querySelectorAll('[data-componente]')];await Promise.all(bloques.map(async bloque=>{const ruta=bloque.dataset.componente;const respuesta=await fetch(ruta,{credentials:'same-origin'});if(!respuesta.ok)throw new Error(`No se pudo cargar el componente: ${ruta}`);bloque.innerHTML=await respuesta.text();bloque.dataset.componenteCargado='true';}));}
